@@ -1,6 +1,8 @@
+<img width="1206" alt="image" src="https://github.com/shuowang26/EndoKED/assets/51802231/87ab3ddb-5fea-421a-93e6-4666974a2112">
+
+
 # EndoKED
 The official codes for **Knowledge Extraction and Distillation from Large-Scale Image-Text Colonoscopy Reports Leveraging Large Language and Vision Models**.
-<img width="407" alt="image" src="https://github.com/shuowang26/EndoKED/assets/51802231/0f965c22-dcf0-44ec-a0b1-e3f9745d430e">
 
 ## Dependencies
 
