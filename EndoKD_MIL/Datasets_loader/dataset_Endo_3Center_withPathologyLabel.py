@@ -11,9 +11,9 @@ import pandas as pd
 from copy import deepcopy
 
 
-def gather_align_EndoImg_Center_forPathology(root_dir='/home/xiaoyuan/Data3/EndoGPT/database/中山',
+def gather_align_EndoImg_Center_forPathology(root_dir='',
                                              pred_dir=None,
-                                             labeled_dir='/home/xiaoyuan/Data3/EndoGPT/database/中山/息肉/图像'):
+                                             labeled_dir=''):
     path_BagAnno = glob(os.path.join(root_dir, '*.xlsx'))[0]
     path_image = os.path.join(root_dir, '图像')
     path_polypAnno = labeled_dir
@@ -134,11 +134,11 @@ def gather_align_EndoImg_Center_forPathology(root_dir='/home/xiaoyuan/Data3/Endo
             top_three_pred = np.argsort(patient_i_instancePred[:, 1])[-3:]
             data_test.append([patient_i_idx, patient_i_instancePred[top_three_pred, 0:2], patient_pathologyLabel])
         else:
-            pass  # patients in '/home/xiaoyuan/Data3/EndoGPT/database/中山/息肉/图像' but not in '/home/xiaoyuan/Data3/EndoGPT/database/中山/息肉/图像_0517'
+            pass
     return data_train, data_test, data_independent_test
 
 
-def gather_external_Pathology(root_dir='/home/xiaoyuan/Data3/EndoGPT/database/外部中心数据精简化（前1000例）'):
+def gather_external_Pathology(root_dir=''):
     all_imgs_along_patient = glob(os.path.join(root_dir, '*/*/'))
 
     # 1.2 index ground truth instances for patients with instance label
@@ -246,8 +246,6 @@ class Endo_img_MIL_all_center_withPathologyLabel(torch.utils.data.Dataset):
                 instance_all = []
                 for i in range(self.num_instances_per_bag):
                     instance_i_path = self.ds[index][1][i, 0]
-                    if instance_i_path.split('/')[2] != 'xiaoyuan':
-                        instance_i_path = instance_i_path.replace('/home/ubuntu/Data/database', '/home/xiaoyuan/Data3/EndoGPT/database')
                     instance_i = io.imread(instance_i_path)
                     instance_i = self.transform(Image.fromarray(np.uint8(instance_i), 'RGB'))
                     instance_all.append(instance_i)
@@ -262,8 +260,6 @@ class Endo_img_MIL_all_center_withPathologyLabel(torch.utils.data.Dataset):
             instance_all = []
             for i in range(self.num_instances_per_bag):
                 instance_i_path = self.ds[index][1][i, 0]
-                if instance_i_path.split('/')[2] != 'xiaoyuan':
-                    instance_i_path = instance_i_path.replace('/home/ubuntu/Data/database', '/home/xiaoyuan/Data3/EndoGPT/database')
                 instance_i = io.imread(instance_i_path)
                 instance_i = self.transform(Image.fromarray(np.uint8(instance_i), 'RGB'))
                 instance_all.append(instance_i)
@@ -277,14 +273,13 @@ class Endo_img_MIL_all_center_withPathologyLabel(torch.utils.data.Dataset):
 
 
 if __name__ == '__main__':
-    # ds_External_test_withInstLabel = gather_external_Pathology(root_dir='/home/xiaoyuan/Data3/EndoGPT/database/外部中心数据精简化（前1000例）')
-    ds_External_test_withInstLabel = gather_external_Pathology(root_dir='/home/xiaoyuan/Data3/EndoGPT/database/Final/前瞻验证集')
+    ds_External_test_withInstLabel = gather_external_Pathology(root_dir='')
     ds_pathology_train, ds_pathology_test = split_GT_pathology_alongPatient(ds_External_test_withInstLabel)
 
     ds_train, ds_test, ds_test_withInstLabel = gather_align_EndoImg_Center_forPathology(
-        root_dir='/home/xiaoyuan/Data3/EndoGPT/database/中山',
-        pred_dir='../results_3Center/tmp/Epoch40',
-        labeled_dir='/home/xiaoyuan/Data3/EndoGPT/database/中山/息肉/图像_0517'
+        root_dir='',
+        pred_dir='',
+        labeled_dir=''
     )
     ds_pathology_train, ds_pathology_test = split_GT_pathology_alongPatient(ds_test_withInstLabel)
     loader_withInstLabel_train = Endo_img_MIL_all_center_withPathologyLabel(ds_pathology_train, num_instances_per_bag=1)
@@ -297,4 +292,3 @@ if __name__ == '__main__':
     print(len(loader_test), loader_test.ds_labelPart_merged.sum(axis=0))
     print(len(loader_test_withInstLabel), loader_test_withInstLabel.ds_labelPart.sum(axis=0))
     print("")
-
