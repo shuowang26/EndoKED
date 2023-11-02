@@ -11,17 +11,15 @@ from tqdm import tqdm
 import pandas as pd
 
 
-def gather_align_EndoImg(root_dir='/home/xiaoyuan/Data3/EndoGPT', split=0.7):
+def gather_align_EndoImg(root_dir='', split=0.7):
     raw_label = np.concatenate([
-        np.array(pd.read_csv(os.path.join(root_dir, 'label/patient_id.txt'))),
-        np.array(pd.read_csv(os.path.join(root_dir, 'label/label_certain.txt'))),
-        # np.array(pd.read_csv(os.path.join(root_dir, 'label/label_all_uncertain.txt'))),
+        np.array(pd.read_csv('')),
+        np.array(pd.read_csv('')),
+        # ...
     ], axis=1)
-    clinical_info = pd.read_excel(os.path.join(root_dir, '中山肠镜报告-标注.xlsx')).to_numpy()
+    clinical_info = pd.read_excel("").to_numpy()
 
-    # endo_patient_xiamen = glob(os.path.join(root_dir, "2022.11月 肠镜报告 厦门/*/*"))
-    endo_patient_fanlin = glob(os.path.join(root_dir, "肠镜报告（2022.09）/*/*"))
-    # endo_patient_all = endo_patient_xiamen + endo_patient_fanlin
+    endo_patient_fanlin = glob("")
     endo_patient_all = endo_patient_fanlin
     endo_patient_all = np.array(endo_patient_all)
 
@@ -50,11 +48,8 @@ def gather_align_EndoImg(root_dir='/home/xiaoyuan/Data3/EndoGPT', split=0.7):
             overlap_found_list.append(patient_name)
         else:
             sample_image = io.imread(glob(os.path.join(patient_dir, "*.JPG"))[0])
-            if sample_image.shape == (576, 720, 3):
-                clip_path.append(patient_dir)
-                clip_label.append(raw_label[i])
-            else:
-                oversize_list.append(patient_name)
+            clip_path.append(patient_dir)
+            clip_label.append(raw_label[i])
     clip_path = np.array(clip_path)
     clip_label = np.array(clip_label)
     clip_data_all = np.concatenate([clip_path[:, None], clip_label], axis=1)
