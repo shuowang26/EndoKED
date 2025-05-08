@@ -16,7 +16,6 @@ To install Python dependencies:
 
 ```
 pip install -r requirements.txt
-
 ```
 
 ## Datasets
