@@ -43,14 +43,6 @@ To download these six datasets, you may refer to the corresponding papers or dir
 #### EndoKED Full Checkpoints
 Due to hospital confidentiality agreements, we are currently unable to release the training dataset. However, based on our EndoKED dataset, we release the checkpoint of our EndoKED-SEG model, which shows exceptional generalisation ability across the six public datasets.
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow" rowspan="2"><br>Model</th>
@@ -89,14 +81,6 @@ Due to hospital confidentiality agreements, we are currently unable to release t
 #### Other Baseline Models
 Moreover, we have pre-trained 9 powerful baseline models (including CNN- and ViT-based architectures), i.e., [Unet](https://github.com/milesial/Pytorch-UNet), [Unet++](https://github.com/4uiiurz1/pytorch-nested-unet), [C2FNet](https://github.com/thograce/C2FNet.git), [DCRNet](https://github.com/PRIS-CV/DCRNet.git), [LDNet](https://github.com/ReaFly/LDNet.git), [Polyp-PVT](https://github.com/DengPingFan/Polyp-PVT), [FCBFormer](https://github.com/ESandML/FCBFormer.git), [Polyp-CASCADE](https://github.com/SLDGroup/CASCADE.git), and [PIDNet (Lightweigh)](https://github.com/XuJiacong/PIDNet.git). We have publicly released the pretrained checkpoints for further research and reproducibility. 
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-9wq8">Model</th>
@@ -129,14 +113,6 @@ Moreover, we have pre-trained 9 powerful baseline models (including CNN- and ViT
 
 With the pre-trained segmentation models using EndoKED annotation, we combine the training set from CVC-ClinicDB and Kvasir-SEG as the final training set and evaluate its effectiveness in the testing set of the six public datasets. It demonstrate that new SOTA performance and better generalisation ability of supervised models can be achieved, with a significant gain compared with pre-training on ImageNet.
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow" rowspan="2"><br>Model</th>
