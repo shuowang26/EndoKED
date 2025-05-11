@@ -57,8 +57,8 @@ Due to hospital confidentiality agreements, we are currently unable to release t
     <th class="tg-c3ow">CVC-300</th>
     <th class="tg-c3ow">ETIS</th>
     <th class="tg-c3ow">PolypGen-Frame</th>
-    <th class="tg-c3ow">PolyGen-Video</th>
-    <th class="tg-c3ow">PolyGen-Small</th>
+    <th class="tg-c3ow">PolypGen-Video</th>
+    <th class="tg-c3ow">PolypGen-Small</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -127,8 +127,8 @@ With the pre-trained segmentation models using EndoKED annotation, we combine th
     <th class="tg-c3ow">CVC-300</th>
     <th class="tg-c3ow">ETIS</th>
     <th class="tg-c3ow">PolypGen-Frame</th>
-    <th class="tg-c3ow">PolyGen-Video</th>
-    <th class="tg-c3ow">PolyGen-Small</th>
+    <th class="tg-c3ow">PolypGen-Video</th>
+    <th class="tg-c3ow">PolypGen-Small</th>
   </tr></thead>
 <tbody>
   <tr>
