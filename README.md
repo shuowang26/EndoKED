@@ -42,6 +42,14 @@ To download these six datasets, you may refer to the corresponding papers or dir
 #### EndoKED Full Checkpoints
 Due to hospital confidentiality agreements, we are currently unable to release the training dataset. However, based on our EndoKED dataset, we release the checkpoint of our EndoKED-SEG model, which shows exceptional generalisation ability across the six public datasets.
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow" rowspan="2"><br>Model</th>
@@ -57,22 +65,22 @@ Due to hospital confidentiality agreements, we are currently unable to release t
     <th class="tg-c3ow">CVC-300</th>
     <th class="tg-c3ow">ETIS</th>
     <th class="tg-c3ow">PolypGen-Frame</th>
-    <th class="tg-c3ow">PolypGen-Video</th>
-    <th class="tg-c3ow">PolypGen-Small</th>
+    <th class="tg-c3ow">PolyGen-Video</th>
+    <th class="tg-c3ow">PolyGen-Small</th>
   </tr></thead>
 <tbody>
   <tr>
     <td class="tg-c3ow">EndoKED</td>
-    <td class="tg-c3ow"><a href="https://drive.google.com/drive/folders/1Ywg4exzgZTGg_2rRn8Qao-CSCSMiaiTG?usp=sharing" target="_blank" rel="noopener noreferrer">full_ckpt</a></td>
-    <td class="tg-c3ow"><a href="https://drive.google.com/file/d/1iNpzCAN_MUhpaVA0VRO49McheA3cZQhi/view?usp=sharing" target="_blank" rel="noopener noreferrer">log</a></td>
-    <td class="tg-c3ow">0.817 </td>
-    <td class="tg-c3ow">0.794 </td>
-    <td class="tg-c3ow">0.622 </td>
-    <td class="tg-c3ow">0.849 </td>
-    <td class="tg-c3ow">0.537 </td>
-    <td class="tg-c3ow">0.656 </td>
-    <td class="tg-c3ow">0.453 </td>
-    <td class="tg-c3ow">0.202 </td>
+    <td class="tg-c3ow"><a href="https://drive.google.com/file/d/1OEY6I5i-MxSjRyrtF1TIaCxyVkvdoWmV/view?usp=sharing" target="_blank" rel="noopener noreferrer">full_ckpt</a></td>
+    <td class="tg-c3ow"><a href="https://drive.google.com/file/d/16sU0U-O8rsopC5BT9MxE30yMlYVvkuTM/view?usp=drive_link" target="_blank" rel="noopener noreferrer">log</a></td>
+    <td class="tg-c3ow">0.883 </td>
+    <td class="tg-c3ow">0.815 </td>
+    <td class="tg-c3ow">0.806 </td>
+    <td class="tg-c3ow">0.893 </td>
+    <td class="tg-c3ow">0.819 </td>
+    <td class="tg-c3ow">0.745 </td>
+    <td class="tg-c3ow">0.668 </td>
+    <td class="tg-c3ow">0.495 </td>
   </tr>
 
 </tbody></table>
