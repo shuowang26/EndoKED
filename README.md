@@ -42,14 +42,6 @@ To download these six datasets, you may refer to the corresponding papers or dir
 #### EndoKED Full Checkpoints
 Due to hospital confidentiality agreements, we are currently unable to release the training dataset. However, based on our EndoKED dataset, we release the checkpoint of our EndoKED-SEG model, which shows exceptional generalisation ability across the six public datasets.
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow" rowspan="2"><br>Model</th>
